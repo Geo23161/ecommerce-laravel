@@ -1,0 +1,187 @@
+:root {
+    
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: light dark;
+    background-color: #f3f4f6;
+    color: #1a1a1a;
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --secondary: #f8fafc;
+    --text: #0f172a;
+    --text-light: #64748b;
+    --background: #ffffff;
+    --accent: #f43f5e;
+    --radius: 1rem;
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  }
+  
+  body {
+    margin: 0;
+    min-height: 100vh;
+  }
+  
+  #app {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Landing page styles */
+  .landing-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .landing-container h1 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    margin-bottom: 1.5rem;
+  }
+  
+  .options-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+    justify-items: center;
+  }
+  
+  .option-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    width: 100%;
+    max-width: 300px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .option-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  }
+  
+  .option-icon {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+  }
+  
+  .option-title {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #2563eb;
+  }
+  
+  .option-description {
+    color: #4b5563;
+    line-height: 1.6;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+  }
+  
+  /* Auth pages styles */
+  .auth-container {
+    width: 90%;
+    max-width: 400px;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  }
+  
+  .auth-container h1 {
+    margin-bottom: 2rem;
+    color: #2563eb;
+  }
+  
+  .auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+  }
+  
+  .form-group label {
+    font-weight: 500;
+    color: #4b5563;
+  }
+  
+  .form-group input,
+  .form-group select {
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  }
+  
+  .submit-button {
+    background: #2563eb;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+  }
+  
+  .submit-button:hover {
+    background: #1d4ed8;
+  }
+  
+  .auth-switch {
+    text-align: center;
+    color: #4b5563;
+  }
+  
+  .auth-switch a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .auth-switch a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 640px) {
+    .landing-container {
+      padding: 1rem;
+    }
+    
+    .options-container {
+      padding: 0.5rem;
+    }
+    
+    .option-card {
+      padding: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .options-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
